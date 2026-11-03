@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Checkout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #EAF6FF;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #176b45;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+
+        .product {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .total {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #176b45;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Smart Checkout</h1>
+
+    <input
+            type="text"
+            placeholder="Scan or search product"
+    >
+
+    <h2>Shopping Cart</h2>
+
+    <div class="product">
+        <span>Milk - 500ml</span>
+        <span>₹30</span>
+    </div>
+    <div class="product">
+        <span>Rice - 1kg</span>
+        <span>₹110</span>
+    </div>
+
+    <div class="product">
+        <span>Bread</span>
+        <span>₹40</span>
+    </div>
+
+    <div class="product">
+        <span>Biscuits</span>
+        <span>₹20</span>
+    </div>
+
+    <div class="total">
+        Total: ₹200
+    </div>
+
+    <button>Proceed to Checkout</button>
+</div>
+</body>
+</html>
