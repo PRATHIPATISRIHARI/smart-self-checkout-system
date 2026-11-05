@@ -3,41 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Self-Checkout</title>
+    <title>Smart Self-Checkout System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<header>
     <h1>Smart Self-Checkout</h1>
-    <p class="subtitle">Add products to your cart</p>
+    <p>Shop easily and check out quickly</p>
+</header>
 
-    <div class="product-card">
-        <h2>Rice</h2>
-        <p>Price: ₹110</p>
-        <button onclick="addToCart(110)">Add to Cart</button>
-        <button class="remove-btn" onclick="removeFromCart(110)">Remove</button>
-    </div>
+<main>
+    <section class="products-section">
+        <h2>Products</h2>
 
-    <div class="product-card">
-        <h2>Milk</h2>
-        <p>Price: ₹30</p>
-        <button onclick="addToCart(30)">Add to Cart</button>
-        <button class="remove-btn" onclick="removeFromCart(30)">Remove</button>
-    </div>
+        <div class="products">
 
-    <div class="product-card">
-        <h2>Bread</h2>
-        <p>Price: ₹40</p>
-        <button onclick="addToCart(40)">Add to Cart</button>
-        <button class="remove-btn" onclick="removeFromCart(40)">Remove</button>
-    </div>
+            <div class="product-card">
+                <h3>Rice</h3>
+                <p>Price: ₹110</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+                <button class="remove-btn" onclick="removeFromCart(1)">
+                    Remove
+                </button>
+            </div>
 
-    <div class="cart">
-        <h2>Cart Total</h2>
-        <p>Total: ₹<span id="total">0</span></p>
-    </div>
-</div>
+            <div class="product-card">
+                <h3>Milk</h3>
+                <p>Price: ₹30</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+                <button class="remove-btn" onclick="removeFromCart(2)">
+                    Remove
+                </button>
+            </div>
+
+            <div class="product-card">
+                <h3>Bread</h3>
+                <p>Price: ₹40</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+                <button class="remove-btn" onclick="removeFromCart(3)">
+                    Remove
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <h2>Shopping Cart</h2>
+
+        <div id="cart">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3 id="total">Total: ₹0</h3>
+
+        <button class="clear-btn" onclick="clearCart()">
+            Remove All Items
+        </button>
+    </section>
+</main>
 
 <script src="script.js"></script>
 </body>
