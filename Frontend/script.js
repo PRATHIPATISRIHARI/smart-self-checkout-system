@@ -1,3 +1,4 @@
+
 const products = [
     { id: 1, name: "Rice", price: 110 },
     { id: 2, name: "Milk", price: 30 },
@@ -10,9 +11,7 @@ let cart = [];
 function addToCart(productId) {
     const product = products.find(item => item.id === productId);
 
-    if (!product) {
-        return;
-    }
+    if (!product) return;
 
     const cartItem = cart.find(item => item.id === productId);
 
@@ -34,9 +33,7 @@ function addToCart(productId) {
 function removeFromCart(productId) {
     const cartItem = cart.find(item => item.id === productId);
 
-    if (!cartItem) {
-        return;
-    }
+    if (!cartItem) return;
 
     cartItem.quantity--;
 
@@ -50,6 +47,12 @@ function removeFromCart(productId) {
 // Remove all items from the cart
 function clearCart() {
     cart = [];
+    displayCart();
+}
+
+// Remove all quantities of one product
+function removeAllOfProduct(productId) {
+    cart = cart.filter(item => item.id !== productId);
     displayCart();
 }
 
@@ -97,10 +100,4 @@ function displayCart() {
     });
 
     totalElement.textContent = `Total: ₹${total}`;
-}
-
-// Remove all quantities of one product
-function removeAllOfProduct(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    displayCart();
 }
