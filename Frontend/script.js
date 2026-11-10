@@ -101,3 +101,32 @@ function displayCart() {
 
     totalElement.textContent = `Total: ₹${total}`;
 }
+
+// Day 5: Search products
+function searchProducts() {
+    const searchValue = document
+        .getElementById("searchInput")
+        .value.toLowerCase()
+        .trim();
+
+    const productCards = document.querySelectorAll(".product-card");
+
+    let found = 0;
+
+    productCards.forEach(card => {
+        const productName = card
+            .querySelector("h3")
+            .textContent.toLowerCase();
+
+        if (productName.includes(searchValue)) {
+            card.style.display = "";
+            found++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    const noResults = document.getElementById("noResults");
+
+    noResults.style.display = found === 0 ? "block" : "none";
+}

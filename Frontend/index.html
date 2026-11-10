@@ -18,13 +18,28 @@
 
 <main class="container">
 
+    <!-- Products Section -->
     <section class="products-section">
+
         <div class="section-heading">
             <h2>Available Products</h2>
             <p>Select products to add them to your cart.</p>
         </div>
 
-        <div class="products">
+        <!-- Product Search -->
+        <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                oninput="searchProducts()"
+        >
+
+        <p id="noResults" style="display: none;">
+            No products found.
+        </p>
+
+        <!-- Product Cards -->
+        <div class="products" id="productsContainer">
 
             <div class="product-card">
                 <div class="product-icon">🌾</div>
@@ -59,7 +74,9 @@
         </div>
     </section>
 
+    <!-- Shopping Cart Section -->
     <section class="cart-section">
+
         <div class="section-heading">
             <h2>🛒 Shopping Cart</h2>
             <p>Your selected items appear here.</p>
@@ -76,14 +93,16 @@
                 Remove All Items
             </button>
         </div>
+
     </section>
 
 </main>
 
 <footer>
-    <p>Smart Self-Checkout System | Day 4 Project</p>
+    <p>Smart Self-Checkout System | Day 5 Project</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

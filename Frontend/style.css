@@ -61,6 +61,33 @@ body {
     box-shadow: 0 3px 12px #00000010;
 }
 
+/* Day 5: Product Search */
+#searchInput {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #176b45;
+}
+
+#searchInput::placeholder {
+    color: #999;
+}
+
+#noResults {
+    display: none;
+    color: #d64545;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
 /* Product grid */
 .products {
     display: grid;
